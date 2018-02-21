@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PWA</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="manifest" href="manifest.json">
+
+    
+    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCRasgyOX8nLuLJwaisLwYI11gVFA_YIHA",
+        authDomain: "pwanotes-71e49.firebaseapp.com",
+        databaseURL: "https://pwanotes-71e49.firebaseio.com",
+        projectId: "pwanotes-71e49",
+        storageBucket: "",
+        messagingSenderId: "147961173097"
+    };
+    firebase.initializeApp(config);
+    </script>
+
+    <script src="js/object.observe.polyfill.js"></script>
+    <script src="js/array.observe.polyfill.js"></script>    
+    <script src="js/push.js"></script>
+    <script src="js/scripts.js"></script>
+</head>
+
+<body class="blue-grey-text">
+    <header id="header" class="grey lighten-4">
+        <h1>Notas - Progressive Web App</h1>
+    </header>
+
+    <div id="content" class="col-md-6 offset-md-3">
+        <h5 class="title">Adicione suas anotações a seguir</h5>
+        <center>
+        <div class="col-md-12">
+            <form id="form-add-note">
+                <input type="text" placeholder="Anotações" class="col-md-2 white">
+                <input type="submit" value="+" class="blue-grey white-text col-md-1">
+            </form>
+        </div>
+
+        <div class="col-md-6">
+            <ul id="notes">
+                <li>Nota</li>
+            </ul>
+        </div>
+
+        </center>
+    
+    </div>
+    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
