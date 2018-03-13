@@ -1,69 +1,278 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
+
 <head>
-    <base href="/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PWA</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/colors.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title></title>
 
-    <link rel="manifest" href="manifest.json">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 
-    
-    <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+    <!-- WoW Js-->
+    <script type="text/javascript" src="assets/js/wow.js"></script>
     <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyCRasgyOX8nLuLJwaisLwYI11gVFA_YIHA",
-        authDomain: "pwanotes-71e49.firebaseapp.com",
-        databaseURL: "https://pwanotes-71e49.firebaseio.com",
-        projectId: "pwanotes-71e49",
-        storageBucket: "",
-        messagingSenderId: "147961173097"
-    };
-    firebase.initializeApp(config);
+        new WOW().init();
     </script>
 
-    <script src="js/object.observe.polyfill.js"></script>
-    <script src="js/array.observe.polyfill.js"></script>    
-    <script src="js/push.js"></script>
-    <script src="js/scripts.js"></script>
 </head>
 
-<body class="blue-grey-text">
-    <header id="header" class="grey lighten-4">
-        <h1>Notas - Progressive Web App</h1>
-    </header>
+<body data-spy="scroll" data-target="#menu">
 
-    <div id="content" class="col-md-6 offset-md-3">
-        <h5 class="title">Adicione suas anotações a seguir</h5>
-        <center>
-        <div class="col-md-12">
-            <form id="form-add-note">
-                <input type="text" placeholder="Anotações" class="col-md-2 white">
-                <input type="submit" value="+" class="blue-grey white-text col-md-1">
-            </form>
-        </div>
+    <!-- Navbar -->
+    <nav id="menu" class="navbar navbar-expand-lg fixed-top transparent">
+        <a class="navbar-brand" href="#"><img class="img-fluid" src=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div class="col-md-6">
-            <ul id="notes">
-                <li>Nota</li>
+        <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#home">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#knowledges">Conhecimentos</a>
+                </li>
             </ul>
         </div>
+        <ul class="navbar-nav ml-auto social">
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/guilherme.mello.731" target="_blank"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/guilhermedemello/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/guitmello" target="_blank"><i class="fa fa-github-square"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <!-- Navbar Ends -->
 
-        </center>
-    
+    <!-- Home -->
+    <section id="home">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 title">
+                        <h1>Guilherme de Mello</h1>
+                        <h3>Desenvolvedor Full-Stack</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Home Ends -->
+   
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="imgperfil">
+                    <center>
+                        <img class="img-fluid" src="assets/img/guilherme.jpg" />
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <!-- Knowledges -->
+        <section id="knowledges">
+            <div class="row">
+                <div class="col-md-12 title">
+                    <h2>Conhecimentos</h2>
+                </div>
+            </div>
+
+            <div class="row exp simple">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/html5-logo.png">
+                        </center>
+                        <h5>HTML5</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/css3-logo.png">
+                        </center>
+                        <h5>CSS3</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/sass-logo.png">
+                        </center>
+                        <h5>Sass</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/bootstrap-logo.png">
+                        </center>
+                        <h5>Bootstrap</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+            
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/materialize-logo.png">
+                        </center>
+                        <h5>Materialize CSS</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/javascript-logo.png">
+                        </center>
+                        <h5>Javascript</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/jquery-logo.png">
+                        </center>
+                        <h5>Jquery</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/angular-logo.png">
+                        </center>
+                        <h5>Angular</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+            
+               <!-- <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/csharp-logo.png">
+                        </center>
+                        <h5>C#</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/aspnet-logo.png">
+                        </center>
+                        <h5>ASP.NET</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>-->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/nodejs-logo.png">
+                        </center>
+                        <h5>Nodejs</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/sqlserver-logo.png">
+                        </center>
+                        <h5>SQL Server</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/mysql-logo.png">
+                        </center>
+                        <h5>MySQL</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/oracle-logo.png">
+                        </center>
+                        <h5>Oracle Database</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row justify-content-center exp">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/git-logo.png">
+                        </center>
+                        <h5>Git</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="expcard wow fadeInUp">
+                        <center>
+                            <img class="img-fluid" src="assets/img/icons/pwa-logo.png">
+                        </center>
+                        <h5>Progressive Web App</h5>
+                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur...</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Knowledges Ends -->
+
+
     </div>
-    
-    
-    
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Copyright &copy - 2017 Guilherme de Mello </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Popper Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap Js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+        crossorigin="anonymous"></script>
+    <!-- Smooth Scroll Js -->
+    <script type="text/javascript" src="assets/js/smooth-scroll.js"></script>
+    <!-- Custom Js -->
+    <script src='assets/js/custom.js'></script>
+
 </body>
+
 </html>
